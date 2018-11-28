@@ -50,7 +50,30 @@
 
 
 2) Monitor Events 
-	
+<ul>
+	<li>Start using: monitorEvents</li>
+	<li>Stop  by: unmonitorEvents</li>
+</ul>
+	<pre>
+	<code>
+		
+			monitorEvents(document.body, "click");
 
+			// open console to see the events output
+
+			// to stop above event 
+
+			unmonitorEvents(document.body,, 'click');
+			
+	</code>
+	</pre>
+3) Get event attached to current node in chrome
+	step
+	<ul>
+		<li>Open console</li>
+		<li>select element tab (left most side)</li>
+		<li>Click on Event Listeners tab (right most side)</li>
+		<li>Un check Ancestors box to get only the events attached to current node we selected</li>
+	</ul>
 </body>
 </html>
