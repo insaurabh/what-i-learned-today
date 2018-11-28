@@ -4,6 +4,6 @@ You can use the [editor on GitHub](https://github.com/maddyBoy/what-i-learned-to
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Domo
+### Important links
 
-[https://maddyboy.github.io/what-i-learned-today/](Demo)
+[Demo](https://maddyboy.github.io/what-i-learned-today/)
