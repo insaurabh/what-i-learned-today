@@ -107,11 +107,14 @@
 	<button onclick="vibrate()">Vibrate</button>
 	<script type="text/javascript">
 		function vibrate() {
+			if( !isMobile.any() ) {
+				alert('No idea, how to vibrate your device, please open in real mobile devices.');
+			} 
 			navigator.vibrate([300, 400, 200, 100, 500]);
 		}
 
 
-		var isMobile = {
+	var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
     },
@@ -134,9 +137,7 @@
     }
 };
 
-if( !isMobile.any() ) {
-	alert('No idea, how to vibrate your device, please open in real mobile devices.');
-} 
+
 	</script>
 </body>
 </html>
