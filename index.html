@@ -93,5 +93,22 @@
 		<li>Click on Event Listeners tab (right most side)</li>
 		<li>Un check Ancestors box to get only the events attached to current node we selected</li>
 	</ul>
+4) vibrate device form webapp
+	<pre>
+	<code>
+		
+		navigator.vibrate(200); // once
+
+		navigator.vibrate([300, 400, 200, 100, 500]); // repeating pattern
+
+	</code>
+	</pre>
+	
+	<button onclick="vibrate()">Vibrate</button>
+	<script type="text/javascript">
+		function vibrate() {
+			navigator.vibrate([300, 400, 200, 100, 500]);
+		}
+	</script>
 </body>
 </html>
