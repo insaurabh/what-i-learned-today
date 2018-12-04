@@ -109,6 +109,34 @@
 		function vibrate() {
 			navigator.vibrate([300, 400, 200, 100, 500]);
 		}
+
+
+		var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+   
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+if( !isMobile.any() ) {
+	alert('No idea, how to vibrate your device, please open in real mobile devices.');
+} 
 	</script>
 </body>
 </html>
