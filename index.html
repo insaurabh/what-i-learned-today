@@ -186,8 +186,32 @@
 
 	 console.log(`outside ${i}`);
 	</code>
-
 </pre>
 
+<hr/>
+<pre>
+<div>In short what spread operator (...) does in background</div>
+	<span>From</span>
+	<code>
+	const array1 = [1,2];
+
+	const arra2 = [3,4,5,6];
+
+	let finalArray = [...array1, ...arra2, 7, 8, 9];
+
+	console.log(finalArray);
+	</code>
+
+	<span>To</span>
+	<code>
+	var array1 = [1, 2];
+
+	var arra2 = [3, 4, 5, 6];
+
+	var finalArray = [].<b/>concat</b>(array1, arra2, [7, 8, 9]);
+
+	console.log(finalArray);
+	</code>
+</pre>
 </body>
 </html>
