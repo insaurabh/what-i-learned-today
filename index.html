@@ -239,5 +239,59 @@
 	</svg>
 </div>
 <br/>
+
+
+<hr/>
+<pre>
+
+<div class="code-info">Set or Array</div>
+<code>
+	
+let arR = [], set = new Set(), n = 1000000;
+
+console.time('Array push');
+for(let i =  0; i < n; i++) {
+	arR.push(i);
+}
+console.timeEnd('Array push');
+
+console.time('set push');
+for(let i =  0; i < n; i++) {
+	set.add(i);
+}
+console.timeEnd('set push');
+
+
+console.time('Array Add'); 
+	arR.push(100000012);
+console.timeEnd('Array Add');
+
+console.time('Set add'); 
+	set.add(100000012);
+console.timeEnd('Set add');
+
+console.time('Set show'); 
+	console.log(set);
+console.timeEnd('Set show');
+
+
+console.time('Set delete'); 
+	set.delete(100000012);
+console.timeEnd('Set delete');
+
+
+console.log(set);
+
+</code>
+</pre>
+
+<br/>
+<div class="code-img">
+	<svg width="700" height="900"
+	  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">       
+	  <image xlink:href="assets/images/set-vs-array-js.svg" height="900" width="700"/>
+	</svg>
+</div>
+
 </body>
 </html>
