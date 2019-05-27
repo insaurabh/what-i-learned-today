@@ -26,6 +26,12 @@
 		    text-align: center;
 		    background: beige;
 		}
+		div {
+			min-width: 100px;
+			min-height: 100px;
+			padding: 10px;
+			border: 1px solid black;
+		}
 	</style>
 </head>
 <body>
@@ -291,6 +297,44 @@
 </div>
 
 <br/>
+
+<div class="code-info">Required Check </div>
+<br/>
+<div id="grandparent">
+	
+	<div id="parent">
+		<div id="child">
+			
+		</div>
+	</div>
+</div>
+
+<div class="code-info">Event bubbling and event capturing ( stopPropagation() used )</div>
+<div class="code-img">
+	<svg width="1200" height="800"
+	  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">       
+	  <image xlink:href="assets/images/event-bubbling-capturing-stop-propagation.svg" height="800" width="1200"/>
+	</svg>
+</div>
+<script type="text/javascript">
+	document.querySelector("#grandparent")
+	.addEventListener('click', () => {
+		alert('Grandparent called')
+	}, false);
+
+	document.querySelector("#parent")
+	.addEventListener('click', (e) => {
+		alert('Parent called');
+		e.stopPropagation();
+	}, false);
+
+	document.querySelector("#child")
+	.addEventListener('click', (e) => {
+		alert('Child called');
+		e.stopPropagation();
+	}, false);
+</script>
+
 
 </body>
 </html>
